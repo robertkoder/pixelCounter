@@ -1,0 +1,113 @@
+@font-face {
+    font-family: nec_apc3;
+    src: url(/media/Web437_NEC_APC3_8x16.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: nec_apc3;
+    image-rendering: pixelated;
+    -webkit-font-smoothing : none;
+    font-smooth: never;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    display:flex;
+}
+
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 1);
+    min-width: 22vw;
+}
+
+#counterDisplay {
+    font-size: 20vw;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.buttonContainer {
+	display: flex;
+    justify-content: center;
+    margin-top: 20%;
+	gap: 4vw;
+}
+
+.counterDisplayOffset {
+    padding-right: 1vw;
+}
+
+.button {
+	cursor: pointer;
+    padding: 1% 20%;
+    font-size: 7vw;
+    font-family: nec_apc3;
+    border: 1px solid black;
+}
+
+.buttonOffset {
+    padding-right: 0.4vw;
+}
+
+.button:hover {
+	background-color: rgb(63, 63, 147);
+	color: white;
+	border: 1px solid black;
+}
+
+#counterDisplay:hover {
+    cursor: default;
+}
+
+.backgroundImage {
+    background-image: url("./media/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center center;
+}
+
+.bounceUp {
+    animation: bounceUp 0.3s ease-in 1;
+}
+
+@keyframes bounceUp {
+    20% {
+        transform: translateY(-1rem);
+    }
+
+    40% {
+        transform: none;
+    }
+}
+
+.bounceDown {
+    animation: bounceDown 0.3s ease-in 1;
+}
+
+@keyframes bounceDown {
+    20% {
+        transform: translateY(+1rem);
+    }
+
+    40% {
+        transform: none;
+    }
+}
